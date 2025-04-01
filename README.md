@@ -1,5 +1,7 @@
 # pure.md MCP server
 
+[![smithery badge](https://smithery.ai/badge/@puremd/puremd-mcp)](https://smithery.ai/server/@puremd/puremd-mcp)
+
 Welcome to the Model Context Protocol (MCP) server for [pure.md](https://pure.md).
 
 ![pure.md - Markdown delivery network for LLMs](https://pure.md/assets/og.png)
@@ -76,4 +78,12 @@ Add the following to your `~/Library/Application\ Support/Claude/claude_desktop_
     }
   }
 }
+```
+
+### Installing via Smithery
+
+To install puremd-mcp for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@puremd/puremd-mcp):
+
+```bash
+npx -y @smithery/cli install @puremd/puremd-mcp --client claude
 ```
