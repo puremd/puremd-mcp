@@ -1,15 +1,20 @@
 {
   "name": "puremd-mcp",
-  "version": "1.0.2",
-  "main": "dist/index.js",
+  "version": "1.0.3",
   "type": "module",
   "author": "pure.md (https://pure.md)",
-  "license": "MIT",
   "description": "Model Context Protocol (MCP) server for pure.md, the markdown delivery network for LLMs",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "bin": {
+    "puremd-mcp": "dist/index.js"
+  },
   "keywords": [
     "ai-search",
     "claude",
     "claude-desktop",
+    "crawler",
+    "cursor",
     "data-extraction",
     "markdown",
     "mcp",
@@ -19,11 +24,9 @@
     "puremd",
     "search-tools",
     "unblocker",
+    "web-scraping",
     "web-search"
   ],
-  "bin": {
-    "puremd-mcp": "dist/index.js"
-  },
   "homepage": "https://github.com/puremd/puremd-mcp",
   "repository": {
     "type": "git",
@@ -33,10 +36,10 @@
     "url": "https://github.com/puremd/puremd-mcp/issues"
   },
   "scripts": {
-    "build": "tsc && node -e \"require('fs').chmodSync('dist/index.js', '755')\"",
+    "build": "rm -rf dist && tsc && node -e \"require('fs').chmodSync('dist/index.js', '755')\"",
     "dev": "tsc --watch",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm run build"
+    "start": "node dist/index.js",
+    "prepare": "npm run build"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.8.0",
