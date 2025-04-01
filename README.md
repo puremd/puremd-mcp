@@ -20,7 +20,9 @@ The [Model Context Protocol](https://modelcontextprotocol.io/introduction), deve
 
 ## Authentication
 
-1. Sign up for a new account at [pure.md](https://pure.md)
+Generating an API key is an optional step that unlocks higher rate limits. If you'd like to use the pure.md MCP server anonymously, simply set your `PUREMD_API_KEY` value to empty string (`""`).
+
+1. Sign up for a new account at [pure.md](https://pure.md) &mdash; it's free to sign up!
 2. In the dashboard, generate a new API token
 3. Copy the token, and use it for the `PUREMD_API_KEY` value in your MCP client's configuration file (see below)
 
