@@ -2,7 +2,7 @@ import "dotenv/config";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
-import pkgJson from "../package.json" assert { type: "json" };
+import pkgJson from "../package.json" with { type: "json" };
 
 const { PUREMD_API_KEY = "" } = process.env;
 
