@@ -2,14 +2,14 @@ import "dotenv/config";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
-import { version } from "./package.json";
+import pkgJson from "../package.json" assert { type: "json" };
 
-const { PUREMD_API_KEY } = process.env;
+const { PUREMD_API_KEY = "" } = process.env;
 
 const server = new McpServer(
   {
     name: "pure.md",
-    version,
+    version: pkgJson.version,
   },
   {
     capabilities: {
@@ -32,7 +32,7 @@ server.tool("unblock-url", { url: z.string() }, async ({ url }) => {
     };
   } catch (error) {
     return {
-      content: [{ type: "text", text: error.message }],
+      content: [{ type: "text", text: (error as Error).message }],
       isError: true,
     };
   }
@@ -50,7 +50,7 @@ server.tool("search-web", { query: z.string() }, async ({ query }) => {
     };
   } catch (error) {
     return {
-      content: [{ type: "text", text: error.message }],
+      content: [{ type: "text", text: (error as Error).message }],
       isError: true,
     };
   }
@@ -62,7 +62,7 @@ async function main() {
     await server.connect(transport);
     console.error("pure.md mcp server running on stdio");
   } catch (error) {
-    console.error(`Failed to start server: ${error.message}`);
+    console.error(`Failed to start server: ${(error as Error).message}`);
     process.exit(1);
   }
 }
