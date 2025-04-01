@@ -1,0 +1,20 @@
+{
+  "name": "puremd-mcp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "puremd-mcp": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pure.md (https://pure.md)",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.8.0",
+    "dotenv": "^16.4.7",
+    "zod": "^3.24.2"
+  }
+}
