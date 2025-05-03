@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/puremd-puremd-mcp-badge.png)](https://mseep.ai/app/puremd-puremd-mcp)
+
 # pure.md MCP server
 
 [![smithery badge](https://smithery.ai/badge/@puremd/puremd-mcp)](https://smithery.ai/server/@puremd/puremd-mcp)
