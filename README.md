@@ -1,6 +1,6 @@
 # pure.md MCP server
 
-[![smithery badge](https://smithery.ai/badge/@puremd/puremd-mcp)](https://smithery.ai/server/@puremd/puremd-mcp)
+[![LightNow capabilities](https://lightnow.ai/badge/io.github.puremd/puremd-mcp)](https://lightnow.ai/servers/io.github.puremd/puremd-mcp)
 
 Welcome to the Model Context Protocol (MCP) server for [pure.md](https://pure.md).
 
